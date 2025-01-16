@@ -1,8 +1,7 @@
 from django.apps import AppConfig
 
-
 class BlogConfig(AppConfig):
-     """
+    """
     Configures the 'blog' application.
 
     Attributes:
