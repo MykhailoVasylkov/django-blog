@@ -1,7 +1,15 @@
 from django.contrib import admin
-from .models import Post, Comment
 from django_summernote.admin import SummernoteModelAdmin
+from .models import Post, Comment
 
+"""
+Register Post model in admin panel.
+Add how post list is displaying.
+Add search functionality.
+Add filter functionality.
+Add prepopulated filds directly to add post page.
+Add summernote functionality to content field.
+"""
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
 

@@ -1,8 +1,11 @@
 from django.contrib import admin
-from .models import About, CollaborateRequest
 from django_summernote.admin import SummernoteModelAdmin
+from .models import About, CollaborateRequest
 
-
+"""
+Register About model in admin panel.
+Add summernote functionality to content field.
+"""
 @admin.register(About)
 class AboutAdmin(SummernoteModelAdmin):
     summernote_fields = ('content',)
@@ -14,7 +17,10 @@ class AboutAdmin(SummernoteModelAdmin):
 #       own projects, then inherit from admin.ModelAdmin like
 #       we do below.
 
+"""
+Register CollaborateRequest model in admin panel.
+Show fields message and read in CollaborateRequest model.
+"""
 @admin.register(CollaborateRequest)
 class CollaborateRequestAdmin(admin.ModelAdmin):
-
     list_display = ('message', 'read',)
