@@ -2,7 +2,7 @@ from django.apps import AppConfig
 
 
 class AboutConfig(AppConfig):
-     """
+    """
     Configures the 'about' application.
 
     Attributes:
